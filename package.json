@@ -1,0 +1,66 @@
+{
+  "name": "typescript-vue-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This repo is deprecated, it was created in the days before Vue shipped with TypeScript out of the box. Now the \r best path to get started is through [the official CLI](https://cli.vuejs.org). We'll keep this repo around as\r a useful archive.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Daniel Rosenwasser (https://github.com/DanielRosenwasser)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^6.0.0",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "css-loader": "^0.28.11",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.3",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.9.2",
+    "vue": "^2.6.11",
+    "vue-jest": "^2.6.0",
+    "vue-loader": "^12.2.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^2.7.0",
+    "webpack-cli": "^3.3.10"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "vue"
+    ],
+    "modulePaths": [
+      "<rootDir>/src",
+      "<rootDir>/node_modules"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      ".*\\.(ts)$": "ts-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "globals": {
+      "vue-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agent00jackson/ugahacks5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agent00jackson/ugahacks5/issues"
+  },
+  "homepage": "https://github.com/agent00jackson/ugahacks5#readme"
+}

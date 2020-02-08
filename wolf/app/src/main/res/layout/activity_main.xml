@@ -76,18 +76,18 @@
                         android:padding="10dp"
                         android:src="@drawable/ic_dislike" />
 
-                    <ImageButton
-                        android:id="@+id/commentbtn"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/round_button_with_border"
-                        android:elevation="7dp"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_comment" />
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/commentbtn"-->
+<!--                        android:layout_width="120dp"-->
+<!--                        android:layout_height="120dp"-->
+<!--                        android:layout_alignParentTop="true"-->
+<!--                        android:layout_centerHorizontal="true"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginRight="20dp"-->
+<!--                        android:background="@drawable/round_button_with_border"-->
+<!--                        android:elevation="7dp"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:src="@drawable/ic_comment" />-->
 
 
                     <ImageButton
@@ -123,7 +123,7 @@
             android:layout_height="match_parent">
 
 
-            <com.quintus.labs.datingapp.Utils.PulsatorLayout
+            <com.ugahacks5.wolf.Utils.PulsatorLayout
                 android:id="@+id/pulsator"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -140,10 +140,10 @@
                     android:layout_height="160dp"
                     android:layout_centerInParent="true"
                     android:src="@drawable/monkey"
-                    app:civ_border_color="@color/transparentPink"
+                    app:civ_border_color="@color/transparentCyan"
                     app:civ_border_width="1dp" />
 
-            </com.quintus.labs.datingapp.Utils.PulsatorLayout>
+            </com.ugahacks5.wolf.Utils.PulsatorLayout>
 
         </RelativeLayout>
     </FrameLayout>

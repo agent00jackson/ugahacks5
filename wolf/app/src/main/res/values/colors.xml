@@ -6,11 +6,11 @@
     * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
     -->
 <resources>
-    <color name="colorPrimary">#d13135</color>
-    <color name="colorPrimaryDark">#d13135</color>
+    <color name="colorPrimary">#12B8FF</color>
+    <color name="colorPrimaryDark">#095C80</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="transparentPink">#99FF4081</color>
+    <color name="transparentCyan">#9912B8FF</color>
 
     <color name="grey">#bfbfbf</color>
     <color name="white">#ffffff</color>
@@ -23,7 +23,7 @@
     <color name="dislikered">#FF2400</color>
 
     <color name="lightgrey">#d1d1d1</color>
-    <color name="pink">#EA2164</color>
+    <color name="Cyan">#EA2164</color>
     <color name="text">#545454</color>
 
     <color name="progress_background">#B6B6B6</color>

@@ -17,8 +17,8 @@
         android:layout_height="match_parent">
 
         <Button
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:background="@drawable/ic_close_black_24dp" />
 
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content">
 
 
-                <com.quintus.labs.datingapp.Utils.SquareImageView
+                <com.ugahacks5.wolf.Utils.SquareImageView
                     android:id="@+id/profileImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -45,8 +45,8 @@
                     android:src="@drawable/monkey" />
 
                 <Button
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
@@ -126,8 +126,8 @@
 
                     <ImageButton
                         android:id="@+id/commentbtn"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center"

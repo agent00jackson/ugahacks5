@@ -59,7 +59,7 @@
                                     android:layout_centerInParent="true"
                                     android:elevation="20dp"
                                     android:text="1"
-                                    android:textSize="60dp"
+                                    android:textSize="120dp"
                                     android:textStyle="bold" />
 
                                 <ImageView
@@ -76,8 +76,8 @@
                                     android:elevation="@dimen/_5dp">
 
                                     <Button
-                                        android:layout_width="30dp"
-                                        android:layout_height="30dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:background="@drawable/ic_add_circle_black_24dp"
                                         android:elevation="@dimen/_5dp" />
                                 </LinearLayout>
@@ -107,7 +107,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_centerInParent="true"
                                         android:text="2"
-                                        android:textSize="60dp"
+                                        android:textSize="120dp"
                                         android:textStyle="bold" />
 
                                     <ImageView
@@ -124,8 +124,8 @@
                                         android:elevation="@dimen/_5dp">
 
                                         <Button
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
                                             android:background="@drawable/ic_add_circle_black_24dp"
                                             android:elevation="@dimen/_5dp" />
                                     </LinearLayout>
@@ -148,7 +148,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_centerInParent="true"
                                         android:text="3"
-                                        android:textSize="60dp"
+                                        android:textSize="120dp"
                                         android:textStyle="bold" />
 
                                     <ImageView
@@ -165,8 +165,8 @@
                                         android:elevation="@dimen/_5dp">
 
                                         <Button
-                                            android:layout_width="30dp"
-                                            android:layout_height="30dp"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
                                             android:background="@drawable/ic_add_circle_black_24dp"
                                             android:elevation="@dimen/_5dp" />
                                     </LinearLayout>
@@ -198,7 +198,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:text="4"
-                                    android:textSize="60dp"
+                                    android:textSize="120dp"
                                     android:textStyle="bold" />
 
                                 <ImageView
@@ -215,8 +215,8 @@
                                     android:elevation="@dimen/_5dp">
 
                                     <Button
-                                        android:layout_width="30dp"
-                                        android:layout_height="30dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:background="@drawable/ic_add_circle_black_24dp"
                                         android:elevation="@dimen/_5dp" />
                                 </LinearLayout>
@@ -242,7 +242,7 @@
                                     android:layout_centerInParent="true"
                                     android:scaleType="fitXY"
                                     android:text="5"
-                                    android:textSize="60dp"
+                                    android:textSize="120dp"
                                     android:textStyle="bold" />
 
                                 <ImageView
@@ -259,8 +259,8 @@
                                     android:elevation="@dimen/_5dp">
 
                                     <Button
-                                        android:layout_width="30dp"
-                                        android:layout_height="30dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:background="@drawable/ic_add_circle_black_24dp"
                                         android:elevation="@dimen/_5dp" />
                                 </LinearLayout>
@@ -284,7 +284,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:text="6"
-                                    android:textSize="60dp"
+                                    android:textSize="120dp"
                                     android:textStyle="bold" />
 
                                 <ImageView
@@ -301,8 +301,8 @@
                                     android:elevation="@dimen/_5dp">
 
                                     <Button
-                                        android:layout_width="30dp"
-                                        android:layout_height="30dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:background="@drawable/ic_add_circle_black_24dp"
                                         android:elevation="@dimen/_5dp" />
                                 </LinearLayout>
@@ -318,7 +318,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.ugahacks5.wolf.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -339,7 +339,7 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/colorAccent" />
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.ugahacks5.wolf.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -361,7 +361,7 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/colorAccent" />
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.ugahacks5.wolf.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -383,7 +383,7 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/colorAccent" />
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.ugahacks5.wolf.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -405,7 +405,7 @@
                         android:layout_marginTop="2dp"
                         android:background="@color/colorAccent" />
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.ugahacks5.wolf.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
@@ -461,7 +461,7 @@
                             android:visibility="visible" />
                     </RelativeLayout>
 
-                    <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+                    <com.ugahacks5.wolf.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_5dp"

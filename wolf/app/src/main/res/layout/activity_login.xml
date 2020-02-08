@@ -27,25 +27,24 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="240dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="30dp"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/logo" />
 
-                <com.quintus.labs.datingapp.customfonts.MyTextView_GreatVibes_Regular
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="40dp"
-                    android:text="Love Dating"
-                    android:textColor="#ff0b00"
-                    android:textSize="30dp" />
+                    android:layout_marginLeft="120dp"
+                    android:text="Wolf"
+                    android:textColor="#12B8FF"
+                    android:textSize="50dp" />
 
             </RelativeLayout>
 
@@ -100,7 +99,8 @@
                     android:padding="12dp"
                     android:text="Login"
                     android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:backgroundTint="#12B8FF"/>
 
                 <TextView
                     android:id="@+id/link_signup"
@@ -109,7 +109,7 @@
                     android:layout_marginBottom="25dp"
                     android:gravity="center"
                     android:text="No accout yet? Create one"
-                    android:textColor="@color/transparentPink"
+                    android:textColor="@color/transparentCyan"
                     android:textSize="16dp" />
             </LinearLayout>
 

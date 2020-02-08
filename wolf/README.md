@@ -1,4 +1,4 @@
-<img src="screen/Love Dating Logo.png" ></img> 
+<img src="screen/Wolf Logo.png" ></img>
 <br/>
 # DatingApp
 Android app like Tinder.

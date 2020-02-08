@@ -22,27 +22,27 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/logo" />
 
-        <com.quintus.labs.datingapp.customfonts.MyTextView_GreatVibes_Regular
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="40dp"
-            android:text="Love Dating"
-            android:textColor="#ff0b00"
-            android:textSize="30dp" />
+            android:layout_marginLeft="60dp"
+            android:text="Wolf"
+            android:textColor="#12B8FF"
+            android:textSize="40dp" />
 
     </RelativeLayout>
 
@@ -74,8 +74,8 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="24dp"
-            android:backgroundTint="#ff4081"
-            android:calendarTextColor="#ff4081"
+            android:backgroundTint="#12B8FF"
+            android:calendarTextColor="#12B8FF"
             android:calendarViewShown="false"
             android:datePickerMode="spinner"
             android:yearListSelectorColor="@color/colorPrimaryDark" />
@@ -88,8 +88,8 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="24dp"
-            android:background="#ff4081"
-            android:backgroundTint="#ff4081"
+            android:background="#12B8FF"
+            android:backgroundTint="#12B8FF"
             android:elevation="24dp"
             android:text="Continue"
             android:textColor="@android:color/white"

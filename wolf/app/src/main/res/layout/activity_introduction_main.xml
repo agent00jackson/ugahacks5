@@ -12,12 +12,16 @@
     android:orientation="vertical"
     android:showDividers="middle">
 
-    <com.chabbal.slidingdotsplash.SlidingSplashView
-        android:id="@+id/splash"
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:imageResources="@array/img_id_arr" />
+        android:layout_height="200dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
 
     <LinearLayout
         style="?android:buttonBarStyle"

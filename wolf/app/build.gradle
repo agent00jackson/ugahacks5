@@ -46,6 +46,7 @@ dependencies {
 
     //sliding dot splash
     implementation 'com.chabbal:slidingdotsplash:1.0.2'
+    implementation 'com.synnapps:carouselview:0.1.4'
 
     //add cardview
     implementation 'androidx.cardview:cardview:1.0.0'

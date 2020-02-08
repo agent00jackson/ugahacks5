@@ -1,12 +1,24 @@
 from flask import Flask, json
 
-companies = [{"id": 1, "name": "Company One"}, {"id": 2, "name": "Company Two"}]
+companyStack = [
+    ("AMZN", "Amazon"),
+    ("MSFT", "Microsoft"),
+    ("TSLA", "Tesla"),
+    ("SYNA", "Synaptics"),
+    ("PINS", "Pinterest"),
+    ("LYFT", "Lyft"),
+]
+portfolio = [
+    ("GOOG", 50),
+    ("AMD", 20)
+]
+
 
 api = Flask(__name__)
 
 @api.route('/companies', methods=['GET'])
 def get_companies():
-  return json.dumps(companies)
+  return json.dumps(companyStack)
 
 if __name__ == '__main__':
     api.run()

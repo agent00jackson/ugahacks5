@@ -2,6 +2,7 @@ package com.ugahacks5.wolf.Main;
 
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -16,6 +17,76 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Controller {
 
     static final String BASE_URL = "https://hackathon-1569554271539.appspot.com/";
+    HackathonAPI api;
+
+
+    public void getStackInfo(String stackItem, final List<StockInfo> stockInfo){
+        Call<List<StockInfo>> call = api.loadStackInfo(stackItem);
+        call.enqueue(new Callback<List<StockInfo>>() {
+            @Override
+            public void onResponse(Call<List<StockInfo>> call, Response<List<StockInfo>> response) {
+                if(response.isSuccessful()) {
+                    List<StockInfo> changesList = response.body();
+                    stockInfo.addAll(changesList);
+                } else {
+                    Log.d("d",response.errorBody().toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<StockInfo>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+    }
+
+    public void getPortfolio(final ArrayList<StockInfo> stock) {
+        Call<List<StockInfo>> call = api.loadStack("status:open");
+        call.enqueue(new Callback<List<StockInfo>>() {
+            @Override
+            public void onResponse(Call<List<StockInfo>> call, Response<List<StockInfo>> response) {
+                if(response.isSuccessful()) {
+                    List<StockInfo> changesList = response.body();
+                    for(StockInfo s : changesList) {
+                        stock.add(s);
+                        Log.d("getPortfolio", s.getTicker());
+                    }
+                    Log.d("getPortfolio", "A Message");
+                } else {
+                    Log.d("d",response.errorBody().toString());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<StockInfo>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+    }
+
+    public void getPosition(){
+
+        Call<List<Position>> call = api.loadPortfolio("status:open");
+        call.enqueue(new Callback<List<Position>>() {
+            @Override
+            public void onResponse(Call<List<Position>> call, Response<List<Position>> response) {
+                if (response.isSuccessful()) {
+                    List<Position> changesList = response.body();
+                    for (Position p : changesList) {
+                        Log.d("p", p.getTicker());
+                    }
+                } else {
+                    Log.d("p", response.errorBody().toString());
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<List<Position>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+    }
 
     public void start() {
         Gson gson = new GsonBuilder()
@@ -27,28 +98,9 @@ public class Controller {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-        HackathonAPI hackathonAPI = retrofit.create(HackathonAPI.class);
+        api = retrofit.create(HackathonAPI.class);
 
-        Call<List<StockInfo>> call = hackathonAPI.loadStack("status:open");
-        call.enqueue(new Callback<List<StockInfo>>() {
-            @Override
-            public void onResponse(Call<List<StockInfo>> call, Response<List<StockInfo>> response) {
-                if(response.isSuccessful()) {
-                    List<StockInfo> changesList = response.body();
-                    for(StockInfo s : changesList)
-                    {
-                        Log.d("d",s.getTicker());
-                    }
-                } else {
-                    Log.d("d",response.errorBody().toString());
-                }
-            }
 
-            @Override
-            public void onFailure(Call<List<StockInfo>> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
 
 
     }

@@ -66,6 +66,13 @@ public class MainActivity extends Activity {
         Controller controller = new Controller();
         controller.start();
 
+        ArrayList<StockInfo> stockInfo = new ArrayList<StockInfo>();
+        controller.getPortfolio(stockInfo);
+        for(StockInfo s : stockInfo) {
+            Log.d("He He He", s.toString());
+        }
+
+
 
         rowItems = new ArrayList<Cards>();
         Cards cards = new Cards(

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.robinhood.spark.SparkAdapter;
 import com.ugahacks5.wolf.R;
 import com.squareup.picasso.Picasso;
 
@@ -22,46 +23,25 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
  */
 
-public class ActiveUserAdapter extends RecyclerView.Adapter<ActiveUserAdapter.MyViewHolder> {
-    List<Users> usersList;
-    Context context;
+public class ActiveUserAdapter extends SparkAdapter {
+    private float[] yData;
 
-    public ActiveUserAdapter(List<Users> usersList, Context context) {
-        this.usersList = usersList;
-        this.context = context;
-    }
-
-    @NonNull
-    @Override
-    public ActiveUserAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.active_user_item, parent, false);
-
-        return new MyViewHolder(itemView);
+    public ActiveUserAdapter(float[] yData) {
+        this.yData = yData;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ActiveUserAdapter.MyViewHolder holder, int position) {
-        Users users = usersList.get(position);
-        holder.name.setText(users.getName());
-        if (users.getProfileImageUrl() != null) {
-            Picasso.get().load(users.getProfileImageUrl()).into(holder.imageView);
-        }
+    public int getCount() {
+        return yData.length;
     }
 
     @Override
-    public int getItemCount() {
-        return usersList.size();
+    public Object getItem(int index) {
+        return yData[index];
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        CircleImageView imageView;
-        TextView name;
-
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imageView = itemView.findViewById(R.id.aui_image);
-            name = itemView.findViewById(R.id.aui_name);
-        }
+    @Override
+    public float getY(int index) {
+        return yData[index];
     }
 }

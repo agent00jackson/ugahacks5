@@ -60,7 +60,7 @@ public class Matched_Activity extends AppCompatActivity {
         float[] yData = new float[30];
 
         for (int i = 0, count = yData.length; i < count; i++) {
-            yData[i] = random.nextFloat();
+            yData[i] = random.nextFloat() * 1000;
         }
 
         scrubInfoTextView = findViewById(R.id.scrub_info_textview);

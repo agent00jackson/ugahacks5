@@ -1,4 +1,5 @@
 from flask import Flask, json, request
+from requests import api
 
 companyStack = [
     ("AMZN", "Amazon", "url", "free two day shipping"),

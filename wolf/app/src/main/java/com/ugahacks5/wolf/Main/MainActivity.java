@@ -63,6 +63,9 @@ public class MainActivity extends Activity {
 
         setupTopNavigationView();
 
+        Controller controller = new Controller();
+        controller.start();
+
 
         rowItems = new ArrayList<Cards>();
         Cards cards = new Cards(

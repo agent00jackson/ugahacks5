@@ -1,12 +1,12 @@
-from flask import Flask, json, request
+from flask import Flask, jsonify, request
 
 companyStack = [
-    ("AMZN", "Amazon", "url", "free two day shipping"),
-    ("MSFT", "Microsoft", "url", "billy g."),
-    ("TSLA", "Tesla", "url", "praise be unto musk"),
-    ("SYNA", "Synaptics", "url", "mouse"),
-    ("PINS", "Pinterest", "url", "we gon craft"),
-    ("LYFT", "Lyft", "url", "yeeee haaaw")
+    {"ticker":"AMZN", "name":"Amazon", "url":"url", "disc":"free two day shipping"},
+    {"ticker":"MSFT", "name":"Microsoft", "url":"url", "disc":"billy g."},
+    {"ticker":"TSLA", "name":"Tesla", "url":"url", "disc":"praise be unto musk"},
+    {"ticker":"SYNA", "name":"Synaptics", "url":"url", "disc":"mouse"},
+    {"ticker":"PINS", "name":"Pinterest", "url":"url","disc":"we gon craft"},
+    {"ticker":"LYFT", "name":"Lyft", "url":"url", "disc":"yeeee haaaw"}
 ]
 portfolio = [
     ("GOOG", 50),
@@ -16,18 +16,18 @@ portfolio = [
 
 app = Flask(__name__)
 
-@api.route('/stack', methods=['GET'])
+@app.route('/stack', methods=['GET'])
 def get_companies():
-    return json.dumps(companyStack)
+    return jsonify(companyStack)
 
-@api.route('/portfolio', methods=['GET'])
+@app.route('/portfolio', methods=['GET'])
 def get_portfolio():
-    return json.dumps(portfolio)
+    return jsonify(portfolio)
 
-@api.route('/swipe', methods=['POST'])
+@app.route('/swipe', methods=['POST'])
 def post_swipe():
     #
-    return json.dumps({"success": True}), 201
+    return jsonify({"success": True})
 
 def loadStack():
     #get list of tickers

@@ -8,5 +8,10 @@ import retrofit2.http.Query;
 
 public interface HackathonAPI {
     @GET("stack")
-    Call<List<StockInfo>> loadChanges(@Query("q") String status);
+    Call<List<StockInfo>> loadStack(@Query("q") String status);
+
+    @GET("portfolio")
+    Call<List<Position>> loadPortfolio(@Query("q") String status);
+
+
 }

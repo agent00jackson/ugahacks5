@@ -1,10 +1,10 @@
 package com.ugahacks5.wolf.Main;
 
 public class StockInfo {
-    String ticker;
-    String name;
-    String description;
-    String pic;
+    private String ticker;
+    private String name;
+    private String description;
+    private String pic;
 
     public String getDescription() {
         return description;

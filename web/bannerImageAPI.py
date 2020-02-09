@@ -1,11 +1,19 @@
-import bs4 from BeautifulSoup
+from bs4 import BeautifulSoup
+from requests import api
+import requests
 
-def get_banner():
-    film_id = '0423409'
-    url = 'http://www.imdb.com/title/tt%s/' % (film_id)
-    soup = BeautifulSoup(urllib2.urlopen(url).read())
-    link = soup.find(itemprop="image")
-    print(link["src"])
-
-if __name__ == '__main__':
-    get_banner()
+def get_banner(company):
+    url = "https://twitter.com/" + company
+    r = requests.get(url)
+    html_content = r.text
+    #print(html_content)
+    soup = BeautifulSoup(html_content, "html.parser")
+    e = 'https://eatatpinkys.com/wp-content/uploads/2019/03/no-image-found.jpg'
+    try:
+        e = soup.select('img[src*="banner"]')[0]['src']
+    except:
+        return 'https://eatatpinkys.com/wp-content/uploads/2019/03/no-image-found.jpg'
+    return e
+  #  for e in soup.select('img[src*="banner"]'):
+  #      print(e)
+    #print(soup.find_all('img'))

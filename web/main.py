@@ -1,4 +1,11 @@
 from flask import Flask, jsonify, request
+from finviz import Screener
+import re
+from finviz.screener import Screener
+from wikipediaAPI import *
+from bannerImageAPI import *
+from time import sleep
+import threading
 
 companyStack = [
     {"ticker":"AMZN", "name":"Amazon", "url":"url", "disc":"free two day shipping"},
@@ -9,8 +16,8 @@ companyStack = [
     {"ticker":"LYFT", "name":"Lyft", "url":"url", "disc":"yeeee haaaw"}
 ]
 portfolio = [
-    ("GOOG", 50),
-    ("AMD", 20)
+    {"ticker":"GOOG","val": 50},
+    {"ticker":"AMD", "val":20}
 ]
 
 
@@ -30,15 +37,21 @@ def post_swipe():
     return jsonify({"success": True})
 
 def loadStack():
-    #get list of tickers
-
-    #for each ticker:
-        #grab company name
-        #grab wikipedia description
-        #grab picture url
-        #create tuple (ticker, name, desc, picture url)
-        #add tuple to companyStack
-    return
+    filters = ['idx_sp500']
+    stonks = Screener(filters=filters, order='price')
+    i = 1
+    for s in stonks:
+        print(str(i) + '.', end='', flush=True)
+        #sleep(.2)
+        name = re.split(' .,',s['Company'])[0]
+        temp = {
+            "ticker": s['Ticker'],
+            "name": name,
+            "url": get_banner(name),
+            "desc": get_description(name)
+        }
+        companyStack.append(temp)
+        i += 1
 
 if __name__ == '__main__':
     loadStack()

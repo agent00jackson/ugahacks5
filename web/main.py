@@ -14,7 +14,7 @@ portfolio = [
 ]
 
 
-api = Flask(__name__)
+app = Flask(__name__)
 
 @api.route('/stack', methods=['GET'])
 def get_companies():
@@ -42,4 +42,4 @@ def loadStack():
 
 if __name__ == '__main__':
     loadStack()
-    api.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)

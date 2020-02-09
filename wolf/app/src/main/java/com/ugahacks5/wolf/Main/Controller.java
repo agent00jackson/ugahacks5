@@ -13,7 +13,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class Controller implements Callback<List<StockInfo>> {
+public class Controller {
 
     static final String BASE_URL = "https://hackathon-1569554271539.appspot.com/";
 
@@ -29,26 +29,28 @@ public class Controller implements Callback<List<StockInfo>> {
 
         HackathonAPI hackathonAPI = retrofit.create(HackathonAPI.class);
 
-        Call<List<StockInfo>> call = hackathonAPI.loadChanges("status:open");
-        call.enqueue(this);
-
-    }
-
-    @Override
-    public void onResponse(Call<List<StockInfo>> call, Response<List<StockInfo>> response) {
-        if(response.isSuccessful()) {
-            List<StockInfo> changesList = response.body();
-            for(StockInfo s : changesList)
-            {
-                Log.d("d",s.ticker);
+        Call<List<StockInfo>> call = hackathonAPI.loadStack("status:open");
+        call.enqueue(new Callback<List<StockInfo>>() {
+            @Override
+            public void onResponse(Call<List<StockInfo>> call, Response<List<StockInfo>> response) {
+                if(response.isSuccessful()) {
+                    List<StockInfo> changesList = response.body();
+                    for(StockInfo s : changesList)
+                    {
+                        Log.d("d",s.getTicker());
+                    }
+                } else {
+                    Log.d("d",response.errorBody().toString());
+                }
             }
-        } else {
-            Log.d("d",response.errorBody().toString());
-        }
+
+            @Override
+            public void onFailure(Call<List<StockInfo>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+
+
     }
 
-    @Override
-    public void onFailure(Call<List<StockInfo>> call, Throwable t) {
-        t.printStackTrace();
-    }
 }

@@ -1,4 +1,4 @@
-import bs4 from BeautifulSoup
+from bs4 import BeautifulSoup
 
 def get_banner():
     film_id = '0423409'

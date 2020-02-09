@@ -42,4 +42,4 @@ def loadStack():
 
 if __name__ == '__main__':
     loadStack()
-    api.run(host='0.0.0.0', port=8080)
+    api.run(host='0.0.0.0', port=8080, debug=True)

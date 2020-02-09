@@ -8,9 +8,12 @@ app = Flask(__name__)
 
 @app.route('/banner', methods=['GET'])
 def get_company_banner():
-    company = request.args.get('company')
-    banner = company
-    return jsonify(get_banner(banner))
+    try:
+        company = request.args.get('company')
+        banner = company
+        return jsonify(get_banner(banner))
+    except:
+        return jsonify('https://eatatpinkys.com/wp-content/uploads/2019/03/no-image-found.jpg')
 
 
 def get_banner(banner):

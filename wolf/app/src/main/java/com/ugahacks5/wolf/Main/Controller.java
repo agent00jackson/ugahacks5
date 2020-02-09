@@ -2,6 +2,7 @@ package com.ugahacks5.wolf.Main;
 
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -19,17 +20,14 @@ public class Controller {
     HackathonAPI api;
 
 
-    public void getStackInfo(String stackItem){
+    public void getStackInfo(String stackItem, final List<StockInfo> stockInfo){
         Call<List<StockInfo>> call = api.loadStackInfo(stackItem);
         call.enqueue(new Callback<List<StockInfo>>() {
             @Override
             public void onResponse(Call<List<StockInfo>> call, Response<List<StockInfo>> response) {
                 if(response.isSuccessful()) {
                     List<StockInfo> changesList = response.body();
-                    for(StockInfo s : changesList)
-                    {
-                        Log.d("d",s.getTicker());
-                    }
+                    stockInfo.addAll(changesList);
                 } else {
                     Log.d("d",response.errorBody().toString());
                 }
@@ -42,17 +40,18 @@ public class Controller {
         });
     }
 
-    public void getPortfolio(){
+    public void getPortfolio(final ArrayList<StockInfo> stock) {
         Call<List<StockInfo>> call = api.loadStack("status:open");
         call.enqueue(new Callback<List<StockInfo>>() {
             @Override
             public void onResponse(Call<List<StockInfo>> call, Response<List<StockInfo>> response) {
                 if(response.isSuccessful()) {
                     List<StockInfo> changesList = response.body();
-                    for(StockInfo s : changesList)
-                    {
-                        Log.d("d",s.getTicker());
+                    for(StockInfo s : changesList) {
+                        stock.add(s);
+                        Log.d("getPortfolio", s.getTicker());
                     }
+                    Log.d("getPortfolio", "A Message");
                 } else {
                     Log.d("d",response.errorBody().toString());
                 }
